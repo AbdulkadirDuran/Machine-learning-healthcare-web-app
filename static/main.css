@@ -1,0 +1,248 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+*{
+  box-sizing: border-box;
+}
+:root{
+  --main-color:#8e44ad;
+  --red:#e74c3c;
+  --orange:#f39c12;
+  --light-color:#888;
+  --light-bg:#eee;
+  --black:#2c3e50;
+  --white:#fff;
+  --border:.1rem solid rgba(0,0,0,.2);
+}
+html{
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.bg-steel {
+  background-color: #fff;
+  
+  box-shadow: 0 0.5rem 1rem #000;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #000000;
+  font-size: 1.5rem;
+  transition: all .3s linear;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #3B185F;
+  border-bottom: 1px solid saddlebrown;
+
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+  
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.row_heart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.row_heart .image{
+  flex: 1 1 40%;
+}
+.row_heart .image img{
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.user-profile .info{
+  background-color: var(--white);
+  border-radius: .5rem;
+  padding: 2rem;
+}
+
+.user-profile .info .user{
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.user-profile .info .user img{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.user-profile .info .user h3{
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.user-profile .info .user p{
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: .3rem 0;
+}
+.user-profile .info .user{
+
+  text-align: center;
+  margin: 0 auto;
+}
+.user-profile .info .user span{
+  font-size: 1.2rem;
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 2rem;
+
+}
+
+.user-profile .info .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.user-profile .info .box-container .box{
+  background-color: var(--light-bg);
+  border-radius: .5rem;
+  padding: 2rem;
+  
+}
+
+.user-profile .info .box-container .box .flex{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.user-profile .info .box-container .box .flex i{
+  font-size:2rem;
+  color: var(--white);
+  background-color: var(--black);
+  text-align: center;
+  border-radius: .5rem;
+  height: 4rem;
+  width: 4rem;
+  line-height: 3.9rem;
+}
+
+.user-profile .info .box-container .box .flex span{
+  font-size: 1.5rem;
+  color: var(--main-color);
+  word-break: break-all;
+}
+
+.user-profile .info .box-container .box .flex p{
+  color: var(--light-color);
+  font-size: 1.5rem;
+}
+
+.comment input{
+  width: 75%;
+  padding: .5rem 2rem;
+  font-size: 1.2rem;
+  color: var(--light-color);
+  border: 1px solid #000;
+  border-radius: .2rem;
+  box-shadow: inset 0 0.5rem 1rem 3rem rgba(0,0,255,.1);
+  margin-bottom: 1.2rem;
+
+}
+.comment button{
+  width: 150px;
+  padding: .5rem;
+  font-size: 1.2rem;
+  color: var(--white);
+  background: var(--orange);
+  border: none;
+  outline: none;
+  border-radius: .5rem;
+  text-transform: capitalize;
+
+}
+.comment p{
+  font-size: 1.2rem;
+  color: var(--black);
+  
+}
+.comment p::first-letter{
+  text-transform: uppercase;
+}
+#main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+    
+      margin-top: 108px;
+      padding: 16px;
+      bottom: 0;
+      margin-right: 0;
+      margin-left: 0;
+      position: relative;
+      border-top: .2rem solid rgba(0,255,0,.5);
+    }
+    
+    #main-footer .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      gap: 1.5rem;
+    }
+    #main-footer .grid a{
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      display: block;
+      
+    }
+    #main-footer .grid a i{
+      color: #8e44ad;
+      padding-right: 0.5rem;
+    }
+  
+    #main-footer .grid .links a:hover{
+      padding-left: 1.8rem;
+    
+      color: #8e44ad;
+      background: #888;
+      border-radius: .5rem;
+    }
+    footer{
+      color: #FFFFFF;
+      text-align: center;
+      border-top: 2px solid #fff;
+      font-size: 1.2rem;
+    }
+
+@media (max-width: 430px){
+  
+  .user-profile .info .box-container .box .flex i{
+    font-size:1rem;
+  
+    text-align: center;
+    
+    height: 2rem;
+    width: 2rem;
+    line-height: 1.9rem;
+    
+  }
+}

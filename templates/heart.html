@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../static/img/health.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+   
+    <title>Heart disease Prediction</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+    
+         
+    
+          <a style="color: #DD5353;" class="navbar-brand mr-4" href="/">ML Medical App</a>
+          <button style="background-color: #251B37; outline: 2px solid #001253;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="/home">Home</a>
+              <a class="nav-item nav-link" href="/about">About</a>
+              <a class="nav-item nav-link" href="/heart">Heart</a>
+              <a class="nav-item nav-link" href="/documentation">Documentation</a>
+              
+            </div>
+            <!-- Navbar Right Side 
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="/login">Login</a>
+              <a class="nav-item nav-link" href="/register">Register</a>
+            </div>-->
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+    
+    <!--Mask-->
+    <div id="intro" class="container-fluid view ">
+      <h1 class="text-center text-capitalize pt-5">Welcome to the heart disease predict health app</h1>
+      <hr style="background: linear-gradient(45deg, blue, red); height: 0.1rem;">
+      <div class="row_heart">
+        <div class="image">
+          <img src="/static/img/heartbeatstories.jpg">
+          
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+          <form action="{{ url_for('predict')}}" method="post">
+             <h2 class="text-center text-capitalize pt-5">Enter the Following features </h2>
+
+            <div class="form-group">
+
+
+              <label for="cp">Chest Pain Type</label>
+              <select class="form-control" id="cp" name = "cp" required="required" placeholder="Chest Pain Type">
+                <option value="1">Typical Angina</option>
+                <option value="2">Atypical Angina</option>
+                <option value="3">Non-Anginal Pain</option>
+                <option value="4">Asymptomatic</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <!-- TODO : Year to accept only year date picker -->
+              <label for="trestbps">Resting Blood Pressure (in mm Hg)</label>
+              <input class="form-control" type="number" id="trestbps" name="trestbps" required="required" placeholder="Resting Blood Pressure">
+            </div>
+
+            <div class="form-group">
+              <label for="chol">Serum Cholestoral in mg/dl</label>
+              <input class="form-control" type="number" step="any" id="chol" name="chol" required="required" placeholder="Serum Cholestoral">
+            </div>
+
+            <div class="form-group">
+              <label for="fbs">Fasting Blood Sugar</label>
+              <select class="form-control" id="fbs" name = "fbs" required="required" placeholder="Fasting Blood Sugar">
+                <option value="0">Fasting Blood Sugar < 120 mg/dl</option>
+                <option value="1">Fasting Blood Sugar > 120 mg/dl</option>
+              </select>
+            </div>
+          
+
+            <div class="form-group">
+              <label for="restecg">Resting Electro-cardiographic Result</label>
+              <select class="form-control" type="number" id="restecg" name="restecg" required="required" placeholder="Resting Electro-cardiographic Result">
+              <option value="0">Normal</option>
+              <option value="1">having ST-T wave abnormality</option>
+              <option value="2">showing probable or definite left ventricular hypertrophy</option>
+            </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="thalach">Thalach (the maximum heart rate acheived)</label>
+              <input class="form-control" id="thalach" name = "thalach" required="required" >
+            </div>
+
+            <div class="form-group">
+              <label for="exang">Exercise Induced Angina</label>
+              <select class="form-control" id="exang" name = "exang" required="required" >
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+            <button style="background: green; width: 150px; display: block; font-size: 1.5rem; padding: 10px 15px; outline: none; border: none;" type="submit" class="btn btn-danger">Predict</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section id="main-footer">
+    
+      <div class="grid">
+        <div class="about">
+          <h2>ML medical App</h2>
+          <p>This is an online machine learning heart disease prediction web app and it is created for everyone to check their heart health status.</p>
+        </div>
+        <div class="links">
+          <h2>Quick links</h2>
+          
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          
+          <a class="nav-item nav-link" href="/heart">Heart</a>
+          <a class="nav-item nav-link" href="/documentation">Documentation</a>
+          
+          
+              
+  
+          
+          
+  
+  
+        </div>
+        <div class="contact">
+          <h2>Contact</h2>
+          <a href="#"><i class="fas fa-map-marker-alt"></i>Lihu avenue 1800, Wuxi, Jiangsu, China</a>
+          <a href="tel:+86 13205296991"><i class="fas fa-phone"></i>+86 13205296991</span>
+            <a href="mailto:abdulkadir5035190144@gmail.com"><i class="fas fa-envelope"></i>abdulkadir5035190144@gmail.com</span>
+        </div>
+      </div>
+      <footer>
+        <p>Created by <span style="color: #8e44ad;">Abdulkadir Duran Adan</span> &copy; 2022</p>
+  
+      </footer>
+    </section>
+      
+      <!--/.Mask-->
+    
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</html>

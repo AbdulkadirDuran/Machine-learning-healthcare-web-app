@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+<title>Home</title>
+<!-- CSS -->
+
+</head>
+   
+<body>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <div class="container">
+        <a style="color: #DD5353;" class="navbar-brand mr-4" href="/">ML Medical App</a>
+        <button style="background-color: #251B37; outline: 2px solid #001253;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link" href="/about">About</a>
+        
+            <a class="nav-item nav-link" href="/heart">Heart</a>
+            <a class="nav-item nav-link" href="/documentation">Documentation</a>
+            
+            
+  
+          </div>
+          <!-- Navbar Right Side 
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/login">Login</a>
+            <a class="nav-item nav-link" href="/register">Register<
+        </div>-->
+      </div>
+    </nav>
+  </header>
+
+  
+
+  <div class="col-md-8">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+  </div>
+  <div class="container">
+    <br>
+		<h1>Welcome to the Heart Disease Prediction ML Web App</h1>
+    <hr style="background: linear-gradient(45deg, blue, red); height: 0.1rem;">
+
+    <h2>Background/ Problem Statement</h2>
+    <P>Heart Disease (including Coronary Heart Disease, Hypertension, and Stroke) remains the No. 1 cause of death in the many parts of the world.The Heart Disease and Stroke Statistics—2019 Update from the American Heart Association indicates that:</P>
+    <ul>
+      <li>116.4 million, or 46% of US adults are estimated to have hypertension. These are findings related to the new 2017 Hypertension Clinical Practice Guidelines.</li>
+      <li>On average, someone dies of CVD every 38 seconds. About 2,303 deaths from CVD each day, based on 2016 data. </li>
+      <li>On average, someone dies of a stroke every 3.70 minutes. About 389.4 deaths from stroke each day, based on 2016 data.</li>
+    </ul>
+    <p>To predict this disease and and solve the problem using advanced technological solutions, machine Learning algorithms, I have created  this Heart Disease  Prediction Web App System using the Logistic Regression  Machine Learning algorithm. 
+      This web app takes a statistical techniques to draw out a result based on trained model. 
+      This web app is intended: <br>
+      <span style="color:#5C2E7E; font-size: 1.5rem;">1.</span> to help doctors detect heart disease at an early stage where it can be cured, thereby saving many lives.
+      <br>
+      <span style="color:#5C2E7E; font-size: 1.5rem;">2.</span> to Help people who cannot afford medical fees as the system is free and available every time.
+      
+    </p>
+  
+
+  
+  <hr style="background: linear-gradient(45deg, blue, green); height: 1px;">
+
+<h3>Advantages</h3>
+
+ <ul>
+  <li>User can easily get the heart disease prediction on single click</li>
+  <li>The system is free and available at any time</li>
+  <li>System is kept online in order to serve people 24x7</li>
+  <li>The Heart Disease Prediction web application is an end user support and online consultation project</li>
+  <li>The application is fed with various details and the Heart disease associated with those details and it allows user to share their heart related issues. It then processes user specific details to check for various cancer disease that could be associated with the inputs received from user. </li>
+  <li>Accurate prediction</li>
+</ul>
+<br> 
+<hr style="background: linear-gradient(45deg, #5C2E7E, #251B37); height: 1px;">
+<section class="user-profile">
+
+  <h3 >Project Contributer</h3>
+
+  <div class="info">
+
+     <div class="user">
+        <img src="/static/img/contributer.jpeg" alt="">
+        <h3>Abdulkadir Duran Adan</h3>
+        <p>Student</p>
+        <span>Abdulkadir Duran Adan is a bachelor student of computer science and Technology at the school of artificial intelligence and computer science, Jiangnan University, Wuxi, PRC China</span>
+     </div>
+  
+     <div class="box-container">
+  
+        <div class="box">
+           <div class="flex">
+              <a href="tel:+86 13205296991"><i class="fas fa-phone"></i></a>
+              <div>
+                 <span>+86 13205296991</span>
+                 
+              </div>
+           </div>
+           
+        </div>
+  
+        <div class="box">
+           <div class="flex">
+              <a href="mailto:abdulkadir5035190144@gmail.com"><i class="fas fa-envelope"></i></a>
+              <div>
+                 <span>abdulkadir5035190144@gmail.com</span>
+                 
+              </div>
+           </div>
+           
+        </div>
+  
+        
+  
+     </div>
+  </div>
+
+</section>
+
+<div class="comment">
+ 
+  
+
+  </p>
+  <h2>Leave a comment</h2>
+  <input type="text" placeholder="Enter your comment here" id="user_input" required>
+  <button type="submit" id="post">post comment</button>
+  
+  
+  <p id="comment_list"></p>
+  
+  
+</div>
+
+</div>
+
+
+
+  <section id="main-footer">
+    
+    <div class="grid">
+      <div class="about">
+        <h2>ML medical App</h2>
+        <p>This is an online machine learning heart disease prediction web app and it is created for everyone to check their heart health status.</p>
+      </div>
+      <div class="links">
+        <h2>Quick links</h2>
+        
+        <a class="nav-item nav-link" href="/">Home</a>
+        <a class="nav-item nav-link" href="/about">About</a>
+        
+        <a class="nav-item nav-link" href="/heart">Heart</a>
+        <a class="nav-item nav-link" href="/documentation">Documentation</a>
+        
+        
+            
+
+        
+        
+
+
+      </div>
+      <div class="contact">
+        <h2>Contact</h2>
+        <a href="#"><i class="fas fa-map-marker-alt"></i>Lihu avenue 1800, Wuxi, Jiangsu, China</a>
+        <a href="tel:+86 13205296991"><i class="fas fa-phone"></i>+86 13205296991</span>
+          <a href="mailto:abdulkadir5035190144@gmail.com"><i class="fas fa-envelope"></i>abdulkadir5035190144@gmail.com</span>
+      </div>
+    </div>
+    <footer>
+      <p>Created by <span style="color: #8e44ad;">Abdulkadir Duran Adan</span> &copy; 2022</p>
+      
+
+    </footer>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script>
+    let comment = document.getElementById("user_input");
+
+    let post = document.getElementById("post");
+    let comment_list = document.getElementById("comment_list");
+    
+    let comment_elements = []
+    
+    
+    
+    const leadsFromLocalStorage = JSON.parse( localStorage.getItem("comment_elements") )
+    if (leadsFromLocalStorage){
+      comment_elements = leadsFromLocalStorage;
+      rendering()
+    
+}
+    post.addEventListener('click', ()=>{
+      comment_elements.push(comment.value)
+     
+      localStorage.setItem("comment_elements", JSON.stringify(comment_elements))
+      rendering()
+      comment.value = ""
+      
+      
+    })
+   
+function rendering(){
+    let listItems = ""
+    for (let i =0; i<comment_elements.length; i++){
+        listItems += "<p> " + comment_elements[i] + "</p>";
+        
+        
+      
+        
+      }
+    comment_list.innerHTML = listItems
+ 
+    
+}
+
+
+
+  </script>
+
+</body>
+</html>

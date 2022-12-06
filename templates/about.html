@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<title>About Page</title>
+</head>
+
+<body>
+
+	<header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a style="color: #DD5353;" class="navbar-brand mr-4" href="/">ML Medical App</a>
+      <button style="background-color: #251B37; outline: 2px solid #001253;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          
+          <a class="nav-item nav-link" href="/heart">Heart</a>
+          <a class="nav-item nav-link" href="/documentation">Documentation</a>
+          
+
+        </div>
+        <!-- Navbar Right Side 
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/login">Login</a>
+          <a class="nav-item nav-link" href="/register">Register<
+      </div>-->
+    </div>
+  </nav>
+</header>
+
+	<div class="container">
+		<h1>Heart Disease Prediction using Logistic Regression algorithm in machine learning</h1>
+    <br>
+    <hr style="background: linear-gradient(45deg, blue, red); height: 0.1rem;">
+
+    <h2>Introduction to Heart Disease</h2>
+    <hr style="background: linear-gradient(45deg, #5C2E7E, #251B37); height: 1px;">
+
+    <h3>Overview</h3>
+    
+    <div class="Overview">
+      
+          
+        <img src="/static/img/images.jpeg" alt="" class="image">
+      
+      <div class="content">
+        <p>Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease; heart rhythm problems (arrhythmias); and heart defects you're born with (congenital heart defects), among others.<br>
+          The term "heart disease" is often used interchangeably with the term "cardiovascular disease." Cardiovascular disease generally refers to conditions that involve narrowed or blocked blood vessels that can lead to a heart attack, chest pain (angina) or stroke. Other heart conditions, such as those that affect your heart's muscle, valves or rhythm, also are considered forms of heart disease.<br>
+        Many forms of heart disease can be prevented or treated with healthy lifestyle choices.</p>
+        <p><b>Heart diseases include</b></p>
+        <ul style="list-style: circle;">
+          <li> vessel disease, such as coronary artery disease</li>
+          <li>Irregular heartbeats (arrhythmias)</li>
+          <li>Heart problems you're born with (congenital heart defects)</li>
+          <li>Disease of the heart muscle</li>
+          <li>Heart valve disease</li>
+        </ul>
+      </div>
+    
+
+  </div>
+  <hr style="background: linear-gradient(45deg, blue, green); height: 1px;">
+
+<h3>Symptoms</h3>
+
+ <ul>
+  <li>Chest pain, chest tightness, chest pressure and chest discomfort (angina)</li>
+  <li>Shortness of breath</li>
+  <li>Pain, numbness, weakness or coldness in your legs or arms if the blood vessels in those parts of your body are narrowed</li>
+  <li>Pain in the neck, jaw, throat, upper abdomen or back</li>
+</ul>
+<br> 
+
+<hr style="background: linear-gradient(45deg, #5C2E7E, #251B37); height: 1px;">
+<h3>Risk factors</h3>
+<p>Risk for heart disease include:</p>
+<ol type="I">
+  <li ><b>Age.</b> older increases the risk of damaged and narrowed arteries and a weakened or thickened heart muscle.</li>
+  <li ><b>Sex.</b> Men are generally at greater risk of heart disease. The risk for women increases after menopause.</li>
+  <li ><b>Family history.</b> A family history of heart disease increases the risk of coronary artery disease, especially if a parent developed it at an early age (before</li>
+     age 55 for a male relative, such as your brother or father, and 65 for a female relative, such as your mother or sister).</li>
+  <li ><b>Smoking.</b>  you smoke, quit. Substances in tobacco smoke damage the arteries. Heart attacks are more common in smokers than in nonsmokers. If you need help </li>
+    quitting, talk to your health care provider about strategies that can help.</li>
+  <li ><b>Unhealthy diet.</b> Diets high in fat, salt, sugar and cholesterol have been linked to heart disease.</li>
+  <li ><b>High blood pressure. </b> high blood pressure can cause the arteries to become hard and thick. These changes interrupt blood flow to the heart and body.</li>
+  <li ><b>High cholesterol.</b> Having high cholesterol increases the risk of atherosclerosis. Atherosclerosis has been linked to heart attacks and strokes.</li>
+  <li ><b>Diabetes.</b> Diabetes increases the risk of heart disease. Obesity and high blood pressure increase the risk of diabetes and heart disease.</li>
+  <li ><b>Obesity.</b> Excess weight typically worsens other heart disease risk factors.</li>
+  <li ><b>Lack of exercises.</b> Being inactive (sedentary lifestyle) is associated with many forms of heart disease and some of its risk factors, too.</li>
+  <li ><b>Stress.</b> Unrelieved stress may damage the arteries and worsen other risk factors for heart disease.</li>
+  <li ><b>Poor dental health.</b> It's important to brush and floss your teeth and gums often. Also get regular dental checkups. Unhealthy teeth and 
+    gums makes it easier for germs to enter the bloodstream and travel to the heart. This can cause endocarditis.</li>
+
+</ol>
+<hr style="background: linear-gradient(45deg, #5C2E7E, #251B37); height: 1px;">
+<h3>preventations</h3>
+<p>The same lifestyle changes used to manage heart disease may also help prevent it. Try these heart-healthy tips:</p>
+<ul>
+  <li>Don't smoke.</li>
+  <li>Eat a diet that's low in salt and saturated fat.</li>
+  <li>Exercise at least 30 minutes a day on most days of the week.</li>
+  <li>Maintain a healthy weight.</li>
+  <li>Reduce and manage stress.</li>
+  <li>Control high blood pressure, high cholesterol and diabetes.</li>
+  <li>Get good sleep. Adults should aim for 7 to 9 hours daily.</li>
+</ul>
+
+	</div>
+  <section id="main-footer">
+    
+    <div class="grid">
+      <div class="about">
+        <h2>ML medical App</h2>
+        <p>This is an online machine learning heart disease prediction web app and it is created for everyone to check their heart health status.</p>
+      </div>
+      <div class="links">
+        <h2>Quick links</h2>
+        
+        <a class="nav-item nav-link" href="/">Home</a>
+        <a class="nav-item nav-link" href="/about">About</a>
+        
+        <a class="nav-item nav-link" href="/heart">Heart</a>
+        <a class="nav-item nav-link" href="/documentation">Documentation</a>
+        
+        
+            
+
+        
+        
+
+
+      </div>
+      <div class="contact">
+        <h2>Contact</h2>
+        <a href="#"><i class="fas fa-map-marker-alt"></i>Lihu avenue 1800, Wuxi, Jiangsu, China</a>
+        <a href="tel:+86 13205296991"><i class="fas fa-phone"></i>+86 13205296991</span>
+          <a href="mailto:abdulkadir5035190144@gmail.com"><i class="fas fa-envelope"></i>abdulkadir5035190144@gmail.com</span>
+      </div>
+    </div>
+    <footer>
+      <p>Created by <span style="color: #8e44ad;">Abdulkadir Duran Adan</span> &copy; 2022</p>
+
+    </footer>
+  </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+</body>
+</html>
