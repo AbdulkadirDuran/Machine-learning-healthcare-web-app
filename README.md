@@ -6,7 +6,7 @@ This web application enables healthcare professionals to input patient data and 
 - Flask
 - Scikit-learn
 - JavaScript HTML/CSS
-## **6. Usage**
+##Usage**
 ## Usage
 1. Clone the repository: git clone https://github.com/AbdulkadirDuran/Machine-learning-healthcare-web-app.git
 2. Navigate to the project directory: cd Machine-learning-healthcare-web-app
